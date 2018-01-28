@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="../style/contactStyle.css" type="text/css">
+    <script type="text/javascript" src="../views/contactScript.js"></script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="notice">
+        </div>
+        <div id="contact-form" class="clearfix">
+            <form id="contact" method="POST" class="pull-left">
+                <h1>Contact</h1>
+                <input type="text" name="firstName" placeholder="First Name" min="1" max="16">
+                <br>
+                <input type="text" name="lastName" placeholder="Last Name" min="1" max="16">
+                <br>
+                <input type="email" name="email" placeholder="Your email address" size="30">
+                <div class="gender">
+                    <h4>Gender:</h4>
+                </div>
+                <input type="radio" name="gender" value="Male">Male
+                <br>
+                <input type="radio" name="gender" value="Female">Female
+                <br>
+                <input type="radio" name="gender" value="Other">Other
+                <br>
+                <textarea name="comment" form="contact" placeholder="Message..."></textarea>
+                <input type="submit" value="Submit">
+            </form>
+            <a href="http://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/" target="_blank" class="pull-right"><img src="http://www.traiteurgordon.com/wp-content/uploads/2017/08/Screenshot_1.png" alt="The_Witcher_3_Wild_Hunt"></a>
+        </div>
+    </div>
+</body>
+
+</html>
