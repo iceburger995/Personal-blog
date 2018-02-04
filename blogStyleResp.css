@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin-bottom: 35px;
+}
+
+.clearfix::after {
+    content: ' ';
+    clear: both;
+    display: block;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+nav {
+    background-color: #d6d6d6;
+}
+
+.navbar {
+    padding: 0;
+    align-items: flex-end;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+nav ul {
+    font: bold 20px Asrial;
+}
+
+nav ul li a {
+    color: #0c408f;
+    padding: 8px 12.9px;
+    display: inline-flex;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    background-color: #0c408f;
+    color: #ffffff;
+}
+
+.nav-brand {
+    width: 70px;
+}
+
+@media (min-width: 360px) {
+    .navbar-header {
+        display: none;
+    }
+}

@@ -11,21 +11,7 @@ html {
 }
 
 body {
-    margin-bottom: 35px;
-}
-
-.clearfix::after {
-    content: ' ';
-    clear: both;
-    display: block;
-}
-
-.pull-left {
-    float: left;
-}
-
-.pull-right {
-    float: right;
+    margin: 45px 0;
 }
 
 nav {
@@ -93,50 +79,34 @@ nav ul li a:hover {
 
 header {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+    justify-content: center;
+    align-items:center;
     text-align: center;
 }
 
-header > a {
-    margin-top: 17.5%;
+.name {
+    margin: 0 1%;
 }
 
-div > h1 {
+.name > h1 {
     font-family: Merriweather, serif;
     text-shadow: 1px 1px grey;
     color: #0c408f;
 }
 
-div>h4 {
-    margin: 5% 5%;
+.name > h4 {
     box-shadow: 0 0 2px;
     border-radius: 10px;
-    padding: 3px;
+    padding: 0.5%;
 }
 
 .profile {
     width: 200px;
     border: 5px solid #0c408f;
     border-radius: 50%;
+    margin: 5% 0;
 }
 
-@media (min-width: 768px) {
-    header {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
-        margin: auto;
-    }
-        
-    header > a {
-        margin-top: 7%;
-    }
-
-    header > div {
-        margin: 7.5% 0 2.5% 2.5%;
-    }
-}
 
 main {
     width: auto;
@@ -152,11 +122,6 @@ main {
 }
 
 @media (min-width: 1280px) {
-    header {
-        width: 70%;
-        margin: auto;
-    }
-
     main {
         width: 70%;
     }

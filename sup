@@ -1,0 +1,165 @@
+sup
+oh god
+virus
+go away
+summoning mccoffee
+lol
+
+ok soooo
+here
+open my code
+
+my code
+with done
+oh
+
+//1
+$.ajax({
+    url: 'wubbalubbadubdub'
+    method: 'GET'
+})
+.done(
+	//2
+	function(data) {
+		//4
+	    // you have data here
+	    doStuffWithData(data);
+	}
+)
+
+//3
+do other stuff()
+
+
+//a
+this happens in a separate kinda-thread (branch essentially)
+this is where you are waiting for the HTTP GET to resolve
+but code still keeps executing below done which is (3)
+
+makes sense?
+
+
+yeah, sort of
+great
+where confused?
+so 3 is basically executed in a sort of background while it waits for the get to finish executing?
+
+nope they are both foreground tasks (JS has 1 thread of execution, but code execution can be asynchronous)
+
+let me give small example
+
+
+$.ajax({
+...
+})
+.done(
+	function(data) {
+		console.log('after resolve')
+		console.log(data)
+	}
+)
+
+//3
+console.log('after request')
+
+
+this will print
+after request
+after resolve
+data
+
+because when you start doing the ajax call, it branches
+
+based on what you are doing in each branch, the order will depend on execution time
+
+so lets say branch A takes 300ms
+and B takes 500ms
+
+A -> B
+
+lets say A takes 500 and B 200
+
+B -> A
+
+so its not reliable when trying to determine which executes first
+they are considered to run "parallel"
+
+meaning WHILE one is going, the other is ALSO going
+
+makes sense so far?
+yes, sort of? or completely?
+
+they are running at the same time but one has a priority after the other
+is this based on the speed on execution?
+nobody has priority
+they are running equally next to each other (its really not, but we have to assume so, because JS gives you no control on the actual threading or job ordering, just that they are async)
+
+okay, I think I know what's happening to my code right now, let me show you
+
+the requests are called randomly
+
+right because they are running parallelly and basically racing against each other. this is called "race condition" meaning a bunch of different things trying to get to the same state first all at once
+there is no control over sequencing
+
+but you can put control on it
+
+so you want to make sure the UPDATE to the screen is done in an expected manner right?
+so that means you need to wait for ALL the requests to resolve before you can change
+correct?
+yes
+
+nice so now go and look at Promise and most specifically inthis case, Promise.all()
+
+okay will do
+
+this is good stuff you are getting into
+gonna have tons of fun
+especially when you start optimizing long running tasks by making them parallel ;)
+
+yeah
+
+you always say "this is fun stuff you're getting into"
+ XD
+
+because it is XDDD
+you huge nerd
+
+LOL, calling me nerd
+fuck you
+
+we good?
+
+sure, I'll get to see what's what with the promises and I'll get back
+
+and if you die, then.. you die nobody can help you
+nono
+.then()
+nice
+
+yoXDu dDie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ignore below
+function doStuffWithData(data) {
+    // hello use data here pls
+
+    var anal.beads.insert().then(suckDick());
+}
+
+perfect
+nice
+<3
+bye
+bai

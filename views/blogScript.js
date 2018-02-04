@@ -38,21 +38,30 @@ window.onload = function() {
         posts.push(new Post(title, content, id));
     };
 
-    addPost(
-        "Goals and Hobbies",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu interdum diam. Nulla et congue ante. Ut nec tristique lorem, a elementum dui. Sed rutrum facilisis nisi, et maximus mi luctus quis. Curabitur erat" +
-        "tellus, viverra sit amet iaculis quis, pellentesque sit amet nibh. Nunc et sem massa. Vestibulum ac turpis interdum, sodales sapien in, cursus diam." +
-        "Donec id diam felis. Etiam quis augue sit amet nisl vulputate rutrum pellentesque ac lacus. Curabitur dictum nisl et lorem ultricies, eu tempor felis facilisis. Nam non nunc nisi. Vivamus feugiat gravida interdum.<br><br>" +
-        "Fusce in auctor magna. Nulla egestas neque at leo suscipit, nec laoreet purus imperdiet. Sed sed nisl vel sem vehicula fermentum. Aliquam lacinia ornare velit et iaculis. Donec feugiat quam massa," +
-        " sed euismod tellus varius at. Sed et elit sed nisl sollicitudin ornare. Donec elementum a magna in condimentum. Nulla vitae feugiat lacus. Sed leo augue, vulputate sed ullamcorper vel, aliquet at turpis." +
-        " Aenean bibendum lectus non quam lobortis, id venenatis libero aliquam. Integer porta laoreet metus pharetra blandit. Phasellus ac nunc condimentum eros ullamcorper interdum." +
-        " Nullam interdum, est nec convallis congue, leo felis porta leo, a malesuada libero tellus ut velit. Suspendisse sed risus sit amet nunc viverra gravida.<br><br>" +
-        "Aliquam suscipit ante enim, non sagittis elit lacinia et. Donec mattis ullamcorper lobortis. Nam vulputate rutrum ante. Sed viverra vestibulum odio, vel feugiat risus imperdiet non. Integer eu laoreet metus. " +
-        " Suspendisse potenti. Pellentesque vitae enim vestibulum, porta velit in, finibus ligula. Cras eu nibh id leo rutrum hendrerit a et ex. Duis cursus tortor id lectus accumsan vehicula.<br><br>" +
-        "Quisque suscipit elit convallis tortor convallis eleifend. Pellentesque ut dui in dui scelerisque feugiat. Aenean nec tristique metus. Quisque a ullamcorper mauris, a pretium leo." +
-        " Suspendisse ultricies nisl at massa sagittis, ut tempor neque scelerisque. Quisque risus nulla, hendrerit non finibus id, mollis ac sem. Etiam pharetra dolor eu interdum mattis. Maecenas a arcu nulla.<br><br>" +
-        "Praesent dapibus pretium eros. Fusce posuere magna a pellentesque tincidunt. Mauris et tellus in augue pellentesque tristique. Mauris quis scelerisque mauris. Duis elementum est at tincidunt interdum." +
-        " Praesent faucibus faucibus enim at pharetra. Praesent non blandit massa. In aliquet placerat urna sit amet dapibus. Curabitur non ante elit.",
+    addPost("How I started",
+        "When I first started Mathematics and Informatics High School I thought that C++ was" +
+        " horrible, I tried to get away from it as much as possible. Due to an unfortunate incident, " +
+        "I had to skip 1 year of High School, which was the second half of the 11th grade and the " +
+        "second of the 12th, the worst part was that I started to see programming as being interesting " +
+        "at that time, but me being sick pretty much made my learning harder, so I gave up. I came to " +
+        "Cluj-Napoca in order to start a Kinesiology College, which at the time I felt like it was what " +
+        "I wanted to do... it turns out it wasn't. Halfway through the first year, I started feeeling " +
+        "the need to solve problems, programming problems exactly, so I started researching for " +
+        "programming languages, but I couldn't decide what to start studying so I " +
+        "thought <em>There's one programming language that I know the basics to</em>, which was C++." +
+        "<br>I revised the basics in order to get better and after a while I got an offer to join " + 
+        "Gameloft's QA as a Manual Tester, so I left C++ again for, I think it was the 4th time, in order " +
+        "to work hard on my job. After getting that job and seeing how the environment and the community " +
+        "of a Software Development company is like, I decided to quit Kinesiotherapy college because I felt " +
+        "that this is what I want to do, I want to work in this environment. <br>After two years of working " +
+        "in Gameloft, I decided to go to my best friend, who is an amazing Web Developer, and ask him " + 
+        "what does it mean to be a Web Developer, what do I need to do and what do I need to learn." +
+        "I did a lot of research regarding HTML, CSS and JavaScript and after working with them for a while " +
+        "I pretty much knew that this is what I want to do. I did the Codeacademy HTML, CSS and JavaScript " +
+        "tutorials. I went over to FreeCodeCamp and did those as well, I did daily exercises from " +
+        "Codewars and once I got a hold of my basic knowledge of these three languages and logical thinking " +
+        "I decided to enroll in a School in order to learn Web Development the right way and I have to say " +
+        "that I absolutely love it...",  
         2135
     );
 
@@ -97,6 +106,10 @@ window.onload = function() {
     }
 
     displayArticle();
+
+    if (window.innerWidth === 768) {
+        console.log(this);
+    }
 
     const postElements = document.querySelectorAll(".post");
     for (let i = 0; i < postElements.length; i++) {

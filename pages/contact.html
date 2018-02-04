@@ -3,37 +3,56 @@
 
 <head>
     <title>Contact</title>
-    <link rel="stylesheet" href="../style/contactStyle.css" type="text/css">
-    <script type="text/javascript" src="../views/contactScript.js"></script>
+    <link rel='icon' href='https://i.imgur.com/vm1vQWl.png'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link rel='stylesheet' href="../style/contact.css" type='text/css'>
 </head>
 
-<body>
-    <div id="container">
-        <div id="notice">
+<body class="container-fluid">
+    <nav class="navbar navbar-default fixed-top">
+        <div class="navbar-header">
+            <a href="#top-page"><img src="https://i.imgur.com/vm1vQWl.png" class="navbar-brand nav-brand"></a>
         </div>
-        <div id="contact-form" class="clearfix">
-            <form id="contact" method="POST" class="pull-left">
-                <h1>Contact</h1>
-                <input type="text" name="firstName" placeholder="First Name" min="1" max="16">
-                <br>
-                <input type="text" name="lastName" placeholder="Last Name" min="1" max="16">
-                <br>
-                <input type="email" name="email" placeholder="Your email address" size="30">
-                <div class="gender">
-                    <h4>Gender:</h4>
+        <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item active"><a href="blog.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <header class="row">
+        <a href='https://scontent-vie1-1.xx.fbcdn.net/v/t1.0-9/18485826_1647257345302620_3986396566758388120_n.jpg?oh=b2635dc2f96dd6ea7a0d519dee583b59&oe=5A1BFC3E' target='_blank'><img src='https://i.imgur.com/ugTSM4Y.png' alt="profilePic" class="profile"></a>
+        <div class="name">
+            <h1>Siegfried "Iceburger" Aczberger</h1>
+            <h4>&quot;<em>Whether you think you can, or you think you can't, you're right.&quot;</em><br>(Henry Ford)</h4>
+        </div>
+    </header>
+    <div id="container">
+        <div class="row info">
+            <div class="col-sm-8 col-md-8">
+                <div class="contact">
+                    <h2>Contact</h2><hr>
+                    <h3>Address: Cluj-Napoca, Cluj</h3>
+                    <h3>Email: siegfried.aczberger@gmail.com</h3>
+                    <h3>Phone: +40 733 531 640</h3>
+                    <h4>I have learned, and keep learning, as much as I can about web development. I work whenever I find the time and I know that I am passionate enough to learn whatever I have to in order to give the best results. I started as a self-taught web developer, worked up to take a course which helped me quite a lot into understanding this technology. I am now ready to begin my work in a Software Development company so that I can expand my knowledge of what it means to be a Front-End Web Developer.</h4>
                 </div>
-                <input type="radio" name="gender" value="Male">Male
-                <br>
-                <input type="radio" name="gender" value="Female">Female
-                <br>
-                <input type="radio" name="gender" value="Other">Other
-                <br>
-                <textarea name="comment" form="contact" placeholder="Message..."></textarea>
-                <input type="submit" value="Submit">
-            </form>
-            <a href="http://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/" target="_blank" class="pull-right"><img src="http://www.traiteurgordon.com/wp-content/uploads/2017/08/Screenshot_1.png" alt="The_Witcher_3_Wild_Hunt"></a>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div class="pages">
+                    <h2>Pages</h2><hr>
+                    <a href="https://github.com/iceburger995" target="_blank" class="fab fa-github fa-4x"></a>
+                    <a href="https://www.linkedin.com/in/iceburger/" target="_blank" class="fab fa-linkedin fa-4x"></a>
+                    <br>
+                    <h5>Resume:</h5>
+                    <a href="https://docs.google.com/document/d/1gNbuiqizeUWJ_0Ryogpg-bn04CQNzg8HwJSivYsKkUs/edit?usp=sharing" target="_blank"><img src="https://lh3.googleusercontent.com/qL-Mxs5kDGNAEWznwye1QHoOjBZ_-Hx86UY8rEmUZdohtTq9NRzEDD0c7RaQKgFmyZeMcZ6s_e1dQf5hOy01j_gR1wLRk5VXKsMvCuq-VMBX59H2rrhx0EQzepS-9_D03hemNdgXdTrc2oJ61a9swRJTj-xtsyQGCBGa4Z8NAOt_w887Vl-ux5m3HjnDu049MZxpfLDfnPiNdotvFKvlmj6Ly2xAaWpscJ2jeg-e0inL2ThXt2hWpUvfl7XpOkgTSa_aeXOCFbfZyqmLjkSF3BHCZfqWHjV_mfR-whO74i5tXySesnJU3Stvg0X204rJk6UcY0VWPpXA16typsbbp-K83fnWzroWrDagg-Eb5kb-PLZcn613GVtA-x7_LZj8iodpxckyPWnl_07zaa6w-DBveFdQXDMzA-S21CgE50RuutJzrCo6kQsGxULs4qMQQ9B4gPiWc1SDYzzFquP5yw7vwRjmkb85YJrxXg7E-_Y5TIY7GMcW_j4rGG-IelgC9unPHsDgoDet5IFCbdIOXMuxnVMGcB-1ZY_tnVaYQp0f18vtXXNsGLyFiJMfo7pDKYK_kD8QUTOEzYp0v9vURupV8ZxbGM_IY4ve6g=w653-h845-no"></a>
+                </div>
+            </div>
         </div>
     </div>
+    <footer class="row">
+        Copyright &copy; 2017 All Rights Reserved by Siegfried "Iceburger" Aczberger
+    </footer>
 </body>
 
 </html>

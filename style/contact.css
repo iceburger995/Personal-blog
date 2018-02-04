@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+body {
+    margin: 45px 0;
+}
+
+nav {
+    background-color: #d6d6d6;
+}
+
+.navbar-header {
+    display: none;
+}
+
+.navbar {
+    padding: 0;
+    align-items: flex-end;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+nav ul {
+    font: bold 20px Arial;
+}
+
+nav ul li a {
+    color: #0c408f;
+    padding: 8px 12.9px;
+    display: inline-flex;
+}
+
+@media (min-width: 320px) {
+    nav ul li a {
+        padding: 8px 7.9px;
+    }
+}
+
+@media (min-width: 360px) {
+    nav ul li a {
+        padding: 8px 12.9px;
+    }
+}
+
+@media (min-width: 375px) {
+    nav ul li a {
+        padding: 8px 14.75px;
+    }
+}
+
+@media (min-width: 412px) {
+    .navbar {
+        margin-top: -5px;
+    }
+    .navbar-header {
+        width: 5px;
+        display: inline;
+        margin: 0 0 -5px -10px;
+    }
+    nav ul li a {
+        padding: 8px 12px;
+    }
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+    background-color: #0c408f;
+    color: #ffffff;
+}
+
+.nav-brand {
+    width: 70px;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}
+
+.name {
+    margin: 0 1%;
+}
+
+.name > h1 {
+    font-family: Merriweather, serif;
+    text-shadow: 1px 1px grey;
+    color: #0c408f;
+}
+
+.name > h4 {
+    box-shadow: 0 0 2px;
+    border-radius: 10px;
+    padding: 0.5%;
+}
+
+.profile {
+    width: 200px;
+    border: 5px solid #0c408f;
+    border-radius: 50%;
+    margin: 5% 0;
+}
+
+#container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F5F5;
+    box-shadow: 0 0 2px;
+    width: 100%%;
+    max-width: 100%;
+}
+
+@media (min-width: 360px) {
+    #container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1280px) {
+    #container {
+        width: 70%;
+    }
+}
+
+.info {
+    justify-content: center;
+}
+
+.info h2 {
+    color: #0c408f;
+}
+
+.info h3, .info h4 {
+    color: #484848;
+    padding: 1% 5%;
+}
+
+.info a {
+    text-decoration: none;
+}
+
+.contact h2 {
+    padding: 1.5% 5%;
+}
+
+.contact > h3:nth-child(4) {
+    word-wrap: break-word;
+}
+
+.pages {
+    text-align: center;
+}
+
+.pages h2 {
+    padding: 3.1% 0;
+}
+
+.fab {
+    margin-top: 4%;
+}
+
+.fa-github {
+    color: black;
+}
+
+.fa-linkedin {
+    color: rgb(0, 119, 181);
+    margin-left: 10%;
+}
+
+.fa-linkedin:visited {
+    color: rgb(0, 119, 181);
+}
+
+.fa-github:visited {
+    color: black;
+}
+
+.fa-github:hover, .fa-linkedin:hover {
+    opacity: 0.7;
+}
+
+.info h5 {
+    color: #484848;
+    margin-top: 2.5%;
+}
+
+.info img {
+    margin: 2.5% 0 5% 0;
+    width: 200px;
+}
+
+.pages img:hover {
+    border: 4px solid #0c408f;
+    opacity: 0.8;
+}
+
+hr {
+    margin-left: 2.5%;
+    width: 95%;
+}
+
+footer {
+    width: 100%;
+    background-color: #d6d6d6;
+    color: #0c408f;
+    padding: 10px 12px;
+    font: bold 16px Arial;
+    position: absolute;
+    bottom: -1%;
+    text-align: center;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    footer {
+        bottom: 0%;
+    }
+}
+
+@media (min-width: 1024px) {
+    footer {
+        bottom: 0%;
+    }
+}
