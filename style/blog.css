@@ -179,6 +179,12 @@ aside h2 {
     margin: 15px 0;
 }
 
+aside h3 {
+    font-family: Merriweather, serif;
+    color: #0c408f;
+    margin: 15px 0;
+}
+
 aside ul li {
     padding: 3px;
     list-style-type: none;

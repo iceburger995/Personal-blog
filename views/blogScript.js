@@ -38,7 +38,7 @@ window.onload = function() {
         posts.push(new Post(title, content, id));
     };
 
-    addPost("How I started",
+    addPost("How I started...",
         "When I first started Mathematics and Informatics High School I thought that C++ was" +
         " horrible, I tried to get away from it as much as possible. Due to an unfortunate incident, " +
         "I had to skip 1 year of High School, which was the second half of the 11th grade and the " +
@@ -66,15 +66,9 @@ window.onload = function() {
     );
 
     addPost(
-        "Projects - both completed and WIP",
-        "this",
+        "What I learned so far...",
+        "Nothing to see here yet, folks!",
         3215
-    );
-
-    addPost(
-        "Post 3",
-        "TExting text text",
-        5312
     );
 
     console.log(posts);
