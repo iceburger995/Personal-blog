@@ -6,6 +6,7 @@ window.onload = function() {
     displayArticle(articleTitle, articleContent, articleId);
     const commentForm = document.querySelector(".add-comment");
     const commentBtn = commentForm.getElementsByTagName("button")[0];
+    
     commentBtn.addEventListener('click', event => {
         event.preventDefault();
 

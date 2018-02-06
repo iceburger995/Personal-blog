@@ -90,6 +90,10 @@ header {
     text-align: center;
 }
 
+header a {
+    border-radius: 50%;
+}
+
 .name {
     margin: 0 1%;
 }
@@ -107,10 +111,17 @@ header {
 }
 
 .profile {
+    background-color: #0c408f;
     width: 200px;
     border: 5px solid #0c408f;
     border-radius: 50%;
     margin: 5% 0;
+    box-shadow: 0 0 7px black;
+}
+
+.profile:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px;
 }
 
 #container {

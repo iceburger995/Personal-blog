@@ -1,4 +1,4 @@
-const wowProfile = 'https://eu.api.battle.net/wow/character/twisting-nether/rottenchilly?fields=statistics&locale=en_GB&apikey=cjfu9939tr5j2jymnu7navrtda3shxhw';
+const wowProfile = 'https://eu.api.battle.net/wow/character/Draenor/Arcatraz?fields=statistics&locale=en_GB&apikey=cjfu9939tr5j2jymnu7navrtda3shxhw';
 
 window.onload = function() {
 
@@ -13,18 +13,23 @@ window.onload = function() {
     }
     const articlesElement = document.getElementById("articles");
     const gameInfo = document.querySelector(".game-info");
+    const loading = document.querySelector(".loading");
     const posts = [];
 
     getInfoFromApi(wowProfile)
         .then(function(response) {
             displayGameInfo(response, wowProfile);
+            loading.style.display = "none";
         });
 
     function displayGameInfo(response, wowProfile) { // function to display the information
-        gameInfo.innerHTML = "Character name: " + response.name +
-            '<br>Realm: ' + response.realm + '<br>Achievement Points: ' + response.achievementPoints + "<br>Quests completed: " +
-            response.statistics.subCategories[4].statistics[0].quantity
-    }
+        gameInfo.innerHTML = "One of my favorite games of all time is World of Warcraft. The reason " +
+        "behind this I will explain at a later time.<br> I currently play a Death Knight since I got bored of my other characters." + 
+        ", his name is " + response.name + " and his Home Realm is " + response.realm + ".<br>" +
+        " With the help of " + response.name + " and the other characters, I have gathered a total of " +
+        response.achievementPoints + " Achievement Points. <br> I have also completed a total of " + 
+        response.statistics.subCategories[4].statistics[0].quantity + " quests, and counting, with my good friend " + response.name + "."
+    };
 
     class Post {
         constructor(title, content, id) {
@@ -32,7 +37,7 @@ window.onload = function() {
             this.content = content;
             this.id = id; // Date.now() will be used to input an id in later stages
         }
-    }
+    };
 
     function addPost(title, content, id) {
         posts.push(new Post(title, content, id));

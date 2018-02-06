@@ -84,6 +84,10 @@ header {
     text-align: center;
 }
 
+header a {
+    border-radius: 50%;
+}
+
 .name {
     margin: 0 1%;
 }
@@ -101,12 +105,18 @@ header {
 }
 
 .profile {
+    background-color: #0c408f;
     width: 200px;
     border: 5px solid #0c408f;
     border-radius: 50%;
     margin: 5% 0;
+    box-shadow: 0 0 7px black;
 }
 
+.profile:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 10px;
+}
 
 main {
     width: auto;
@@ -129,6 +139,10 @@ main {
 
 #full-article {
     width: 0 auto;
+}
+
+section:hover {
+    transform: scale(1.02);
 }
 
 section > a:hover {
@@ -168,6 +182,12 @@ button a {
     text-decoration: none;
 }
 
+.loading {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
 aside {
     width: auto;
 }
@@ -180,6 +200,12 @@ aside h2 {
 }
 
 aside h3 {
+    font-family: Merriweather, serif;
+    color: #0c408f;
+    margin: 15px 0;
+}
+
+aside h4 {
     font-family: Merriweather, serif;
     color: #0c408f;
     margin: 15px 0;
