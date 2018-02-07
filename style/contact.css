@@ -217,6 +217,7 @@ header a {
 .pages img:hover {
     border: 4px solid #0c408f;
     opacity: 0.8;
+    transform: scale(1.10);
 }
 
 hr {

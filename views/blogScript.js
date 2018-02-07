@@ -28,7 +28,7 @@ window.onload = function() {
         ", his name is " + response.name + " and his Home Realm is " + response.realm + ".<br>" +
         " With the help of " + response.name + " and the other characters, I have gathered a total of " +
         response.achievementPoints + " Achievement Points. <br> I have also completed a total of " + 
-        response.statistics.subCategories[4].statistics[0].quantity + " quests, and counting, with my good friend " + response.name + "."
+        response.statistics.subCategories[4].statistics[0].quantity + " quests, and counting, with him."
     };
 
     class Post {
@@ -72,8 +72,44 @@ window.onload = function() {
 
     addPost(
         "What I learned so far...",
-        "Nothing to see here yet, folks!",
-        3215
+        "I have worked all by myself doing all sorts of exercises before enrolling to the Informal School of IT. I learned about basic HTML and CSS and " +
+        "I found them to be pretty easy, being static and all, but even these two have their tricky parts, especially once you get into Flexbox and start " +
+        "using libraries.<br>I concentrated more on JavaScript though, since I felt like that's the most important part of web development, it's certainly " +
+        "the hardest.I worked for about a month using HTML and CSS, doing basic stuff like positioning, how to use attributes and how CSS connects to HTML, " +
+        "I learned about Bootstrap and used it for a little while, but didn't waste too much time with it.<br>Once I felt like I learned the basics, I went " +
+        "ahead and started learning Javscript the real way. I felt like FreeCodeCamp had some very interesting exercises and what I appreciated most about this " +
+        "app was the fact that the challenges that were given to you didn't had much information about how to solve it, so you basically had to research " +
+        "quite a lot in order to do the challenges the right way. Of course you had the way to solve them right on their forum, and even though I am ashamed " +
+        "to say that I looked up one of the challenges and how to properly solved it, after doing so I went ahead and did the same exact challenge again without " +
+        "any help whatsoever. Codeacademy had some pretty neat ways of teaching you JavaScript, but they didn't have any challenging exercises and I felt " +
+        "like I hadn't learned anything by the time I was done with it. After doing these things, I went ahead to my friend and asked him to give me " +
+        "some advice of how can I become better at understanding the ways of the JavaScript... and he did. Little did I know that some hard times were " +
+        "gonna come by, but these hard times got me to understand some pretty good things. The challenges were composed of: <ul> " +
+        "<li>Logging 'Hello World'</li>" +
+        "<li>Calculate the Average, Mean and Mode of several variables</li>" +
+        "<li>Creating an Object and find out what properties and methods are</li>" +
+        "<li>Creating a Constructor and prototype</li>" +
+        "<li>Creating a Mini-IMDB clone using Constructors, Objects and Methods to display a full description of the Movie and Actors</li>" +
+        "<li>Creating an Object filled with the built-in Array Methods without using other Methods not created by myself for help</li></ul>" +
+        "During the last assignment, I felt pretty comfortable of the knowledge I have gained with the JavaScript language and so I decided " +
+        "to enroll to the Informal School of IT to understand and learn Web Development in the proper way. The first couple of months were " +
+        "mostly recap of what I had already learned and there were moments when I thought that I was probably better off on my own.<br>" +
+        "What I was waiting for the most was the DOM Manipulation lessons, AJAX and how to use APIs, once we got to those lessons, I felt " +
+        "challenged again and was happy to learn new things. Making a request to the API and displaying every little thing from it felt like " +
+        "magic and I felt like Harry Potter doing his first Wingardium Leviosa. All the time spent on JavaScript before beginning this course" + 
+        "was very well spent, since I already had my JS knowledge and it was much easier to understand how the DOM worked and how to use the " +
+        "Objects from the API to my advantage. I was always challenged with newer tasks and even though I wished we had more homework to " +
+        "use what I had learned, I was still happy because we had our final Project, which was to creat an IMDB-look-alike web app, and that " +
+        "was probably the time where I got to actually be part of a real project, a real team and got to use all the knowledge I had gathered before " +
+        "and during the course. I also had a React lesson for ~a week in which we learned the basics of using that Framework, however I was not interested " +
+        "at all, I wanted to feel as comfortable as possible using plain Vanilla.js and I wasn't about to go overboard about learning something " +
+        "that I can't quite understand fully yet, but I think I am ready now. I find that framework to be incredibly helpful and the way it does " +
+        "its job is remarkable, but I just didn't felt the need to learn it at the time, same with jQuery. I did learn jQuery for a good time during " +
+        "my time at the School, but other than making AJAX feel a little easier to use, I felt the library to overcomplicate things that I didn't " +
+        "fully understand.<br>I was saying that I am ready now to learn a framework and maybe take it to the next level, so I started reading and " +
+        "watching videos about TypeScript and I am interested to try my first framework, not sure about what to choose, but I heard Vue.js to be a " +
+        "really interesting one so I might start with that, it's also new and not as popular as React or Angular.",
+        3215  
     );
 
     console.log(posts);
