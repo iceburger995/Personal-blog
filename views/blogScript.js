@@ -1,34 +1,49 @@
-const wowProfile = 'https://eu.api.battle.net/wow/character/Draenor/Arcatraz?fields=statistics&locale=en_GB&apikey=cjfu9939tr5j2jymnu7navrtda3shxhw';
+const wowProfile = 'https://eu.api.battle.net/wow/character/Draenor/Nishalanth?fields=statistics&locale=en_GB&apikey=cjfu9939tr5j2jymnu7navrtda3shxhw';
 
 window.onload = function() {
 
-    function getInfoFromApi(wowProfile) { // Gather info from the API
-        return $.ajax({
-            url: wowProfile,
+    // function getInfoFromApi(wowProfile) { // Gather info from the API
+    //     return $.ajax({
+    //         url: wowProfile,
+    //         method: 'GET',
+    //         error: function(err) {
+    //             alert('There has been an error: ' + err)
+    //         }
+    //     });
+    // }
+
+    function getInfoFromAPI(page) {
+        return fetch(page, {
             method: 'GET',
             error: function(err) {
-                alert('There has been an error: ' + err)
+                console.log('There has been an error: ' + err)
             }
-        });
+        })
+        .then(response => response.json());
     }
+
     const articlesElement = document.getElementById("articles");
     const gameInfo = document.querySelector(".game-info");
     const loading = document.querySelector(".loading");
     const posts = [];
+    const avatar = document.querySelector('.avatar');
 
-    getInfoFromApi(wowProfile)
+    getInfoFromAPI(wowProfile)
         .then(function(response) {
+            console.log(response);
             displayGameInfo(response, wowProfile);
             loading.style.display = "none";
         });
 
     function displayGameInfo(response, wowProfile) { // function to display the information
-        gameInfo.innerHTML = "One of my favorite games of all time is World of Warcraft. The reason " +
-        "behind this I will explain at a later time.<br> I currently play a Death Knight since I got bored of my other characters." + 
-        ", his name is " + response.name + " and his Home Realm is " + response.realm + ".<br>" +
+        gameInfo.innerHTML = "<img src='http://render-eu.worldofwarcraft.com/character/" + response.thumbnail + "' class='avatar'" + "> One of the games that " +
+        "I play the most is World of Warcraft. The reason " +
+        "behind this I will explain at a later time.<br> I currently play a Demon Hunter since I got bored of my other characters." + 
+        ", her name is " + response.name + " and her Home Realm is " + response.realm + ".<br>" +
         " With the help of " + response.name + " and the other characters, I have gathered a total of " +
         response.achievementPoints + " Achievement Points. <br> I have also completed a total of " + 
-        response.statistics.subCategories[4].statistics[0].quantity + " quests, and counting, with him."
+        response.statistics.subCategories[4].statistics[0].quantity + " quests, and counting, with him.";
+
     };
 
     class Post {
@@ -200,10 +215,6 @@ window.onload = function() {
     }
 
     displayArticle();
-
-    if (window.innerWidth === 768) {
-        console.log(this);
-    }
 
     const postElements = document.querySelectorAll(".post");
     for (let i = 0; i < postElements.length; i++) {
